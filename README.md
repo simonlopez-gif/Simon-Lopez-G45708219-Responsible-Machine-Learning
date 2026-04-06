@@ -71,14 +71,14 @@ I tried to keep the code close to the class pipeline from Lecture 02 while still
 I completed this assignment myself. I used ChatGPT only for limited help with debugging, syntax questions, and fixing coding errors during the Python translation process. And correcting governace memo
 
 
-##Assignment 3: Disparate Impact Audit of the COMPAS Model
+## Assignment 3: Disparate Impact Audit of the COMPAS Model
 
-##Purpose of the analysis
+## Purpose of the analysis
 The purpose of this assignment is to apply fairness and disparity testing methods to the COMPAS model we worked with in class. Using the cleaned COMPAS dataset and the model pipeline already built in the notebook, I followed the general approach from Lecture 03 and evaluated whether the model produced different outcomes across protected groups. The analysis includes calculating adverse impact ratio (AIR), marginal effect (ME), and standardized mean difference (SMD), separately for race and sex. I also added an intersectional analysis using race × sex subgroups, computed false positive rate (FPR) and false negative rate (FNR) by race, and used a two-proportion z-test to check statistical significance.
 
 The main goal of this assignment was not just to measure model performance, but to test whether the model may create fairness concerns across groups. In other words, the focus here was on bias measurement and compliance-style auditing rather than only prediction accuracy. I also compared practical significance and statistical significance, since both matter when interpreting disparity results.
 
-##Python libraries used
+## Python libraries used
 The main Python libraries I used were:
 	•	pandas
 	•	numpy
@@ -89,17 +89,17 @@ The main Python libraries I used were:
 
 I also used standard Python functions and notebook cells from the earlier part of the notebook for data cleaning, preprocessing, and model generation.
 
-##Instructions for reproducing the results
+## Instructions for reproducing the results
 	1.	Open the notebook in Jupyter Notebook or Google Colab.
 	2.	Run the data cleaning and preprocessing cells first, since the Assignment 3 section depends on the cleaned COMPAS dataset created earlier in the notebook.
 	3.	Make sure the needed libraries are installed, especially statsmodels and solas-ai-disparity.
 	4.	Run the Assignment 3 cells in order from top to bottom.
 	5.	Do not skip cells, because the fairness audit section depends on the model and test-set variables already created earlier in the notebook.
 
-##Notes
+## Notes
 I tried to keep the code close to the class pipeline from Lecture 03 while also making sure it worked correctly in Python. Some results, especially for very small subgroups, should be interpreted carefully because small sample sizes can make disparity estimates unstable.
 
-##Acknowledgment
+## Acknowledgment
 I completed this assignment myself. I used ChatGPT only for limited help with debugging, syntax questions, fixing coding errors during the Python translation process, and improving the wording of the compliance memo.
 
 
