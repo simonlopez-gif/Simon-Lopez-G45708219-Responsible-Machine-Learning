@@ -102,4 +102,46 @@ I tried to keep the code close to the class pipeline from Lecture 03 while also 
 ## Acknowledgment
 I completed this assignment myself. I used ChatGPT only for limited help with debugging, syntax questions, fixing coding errors during the Python translation process, and improving the wording of the compliance memo.
 
+## Assignment 4: Robustness, Generalization, and Dataset Drift Audit
+
+### Purpose of the Analysis
+
+The purpose of this assignment is to extend the COMPAS model pipeline from class and evaluate whether the model remains reliable beyond average accuracy. Using the cleaned COMPAS dataset and the models from the Lecture 04 workflow, I tested the model for distribution drift, generalization, spurious-correlation risk, robustness, and subgroup performance.
+
+The analysis includes training a Logistic Regression model and a Gradient-Boosted Tree model, comparing train and test performance, calculating PSI and KS tests for numeric features, calculating MMD in the encoded feature space, comparing train and test score distributions, running counterfactual swaps on selected attributes, stress testing `priors_count`, creating ICE-style curves, creating sensitivity summaries, and evaluating model performance across race, gender, age, and charge-degree slices.
+
+The main goal of this assignment was not just to report model accuracy, but to check whether the model is stable, reliable, and defensible under changing conditions. In other words, the focus here was on robustness and audit-level reasoning rather than only prediction performance.
+
+### Python Libraries Used
+
+The main Python libraries I used were:
+
+- pandas
+- numpy
+- matplotlib
+- scipy
+- scikit-learn
+
+I also used standard Python functions and notebook cells from the earlier assignments for data cleaning, preprocessing, and model training.
+
+### Instructions for Reproducing the Results
+
+1. Open the notebook in Jupyter Notebook or Google Colab.
+2. Run the data loading and cleaning cells first, since the Assignment 4 section depends on the cleaned COMPAS dataset.
+3. Run the preprocessing and model training cells before the robustness audit section.
+4. Make sure the needed libraries are installed, especially `scipy` and `scikit-learn`.
+5. Run the Assignment 4 cells in order from top to bottom.
+6. The dataset is loaded from GitHub, so internet access is needed.
+7. Do not skip cells, because later drift, robustness, and slice-evaluation steps depend on variables created earlier in the notebook.
+
+### Notes
+
+I tried to keep the code close to the Lecture 04 class pipeline while also making sure it worked correctly in Python. Some results may look slightly different depending on package versions or random seed behavior, but the main logic is the same.
+
+This assignment should be interpreted as a reliability audit. The model may perform well on average, but the analysis checks whether it also remains stable under data shift, feature perturbations, counterfactual changes, and subgroup differences.
+
+### Acknowledgment
+
+I completed this assignment myself. I used ChatGPT only for limited help with debugging, syntax questions, fixing coding errors during the Python implementation, and improving the wording of the audit interpretations.
+
 
